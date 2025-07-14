@@ -35,4 +35,6 @@ jobs:
         with:
           claude_code_oauth_token: ${{ secrets.OAUTH_TOKEN }}
           allowed_tools: "Bash,Bash(*)"
-          custom_instructions: "You are a helpful AI assistant that provides code suggestions and explanations. You can also run shell commands to test your code. Use the 'Bash' tool for executing shell commands. If you need to run a command, use 'Bash(*)'. If you need to provide code suggestions, just write the code without using the 'Bash' tool."
+          custom_instructions: |
+            日本語で記載してください
+            PRの概要は簡潔にわかりやすく記載してください
