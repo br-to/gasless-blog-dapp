@@ -49,10 +49,10 @@ build/
 out/
 
 # Blockchain
-artifacts/
+# artifacts/ - コメントアウト: フロントエンドの型生成で使用
 cache/
 typechain/
-typechain-types/
+# typechain-types/ - コメントアウト: フロントエンドの型生成で使用
 
 # Hardhat
 # hardhat.config.ts (commented out as we want to track this file)
