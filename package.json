@@ -7,7 +7,7 @@
     "compile": "hardhat compile",
     "test": "hardhat test",
     "deploy:local": "hardhat run scripts/deploy.ts --network localhost",
-    "deploy:testnet": "hardhat run scripts/deploy.ts --network goerli",
+    "deploy:testnet": "hardhat run scripts/deploy.ts --network sepolia",
     "deploy:mainnet": "hardhat run scripts/deploy.ts --network mainnet",
     "node": "hardhat node",
     "coverage": "hardhat coverage",
@@ -16,7 +16,10 @@
     "size": "hardhat size-contracts",
     "slither": "slither .",
     "frontend:dev": "cd frontend && npm run dev",
-    "backend:dev": "cd backend && npm run dev"
+    "frontend:build": "cd frontend && npm run build",
+    "frontend:test": "cd frontend && npm run test",
+    "typechain": "hardhat compile",
+    "clean": "hardhat clean"
   },
   "keywords": [
     "hardhat",
@@ -37,7 +40,7 @@
     "@nomicfoundation/hardhat-ethers": "^3.0.0",
     "@nomicfoundation/hardhat-network-helpers": "^1.0.0",
     "@nomicfoundation/hardhat-toolbox": "^6.0.0",
-    "@nomicfoundation/hardhat-verify": "^2.0.0",
+    "@nomicfoundation/hardhat-verify": "^2.0.14",
     "@typechain/ethers-v6": "^0.5.1",
     "@typechain/hardhat": "^9.1.0",
     "@types/chai": "^4.2.0",
