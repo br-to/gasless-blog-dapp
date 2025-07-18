@@ -42,24 +42,11 @@ const config: HardhatUserConfig = {
       accounts: process.env.PRIVATE_KEY ? [process.env.PRIVATE_KEY] : [],
       chainId: 1,
     },
-    polygon: {
-      url: process.env.POLYGON_URL || '',
-      accounts: process.env.PRIVATE_KEY ? [process.env.PRIVATE_KEY] : [],
-      chainId: 137,
-    },
-    polygonMumbai: {
-      url: process.env.POLYGON_MUMBAI_URL || '',
-      accounts: process.env.PRIVATE_KEY ? [process.env.PRIVATE_KEY] : [],
-      chainId: 80001,
-    },
   },
   etherscan: {
     apiKey: {
       mainnet: process.env.ETHERSCAN_API_KEY || '',
-      goerli: process.env.ETHERSCAN_API_KEY || '',
       sepolia: process.env.ETHERSCAN_API_KEY || '',
-      polygon: process.env.POLYGONSCAN_API_KEY || '',
-      polygonMumbai: process.env.POLYGONSCAN_API_KEY || '',
     },
   },
   gasReporter: {
