@@ -31,22 +31,12 @@ jobs:
     - name: Deploy to Sepolia
       run: npx hardhat run scripts/deploy.ts --network sepolia
 
-    - name: Wait for contract indexing
-      run: |
-        echo "Waiting for contract to be indexed by Etherscan..."
-        sleep 90
-
     - name: Verify contract on Etherscan
       run: |
-        if [ -f "deployment-address.txt" ]; then
-          CONTRACT_ADDRESS=$(cat deployment-address.txt)
-          echo "Verifying contract at address: $CONTRACT_ADDRESS"
-          npx hardhat verify --network sepolia "$CONTRACT_ADDRESS"
-          echo "Contract verification completed"
-        else
-          echo "Deployment address file not found"
-          exit 1
-        fi
+        CONTRACT_ADDRESS=$(cat deployment-address.txt)
+        echo "Verifying contract: $CONTRACT_ADDRESS"
+        sleep 30
+        npx hardhat verify --network sepolia "$CONTRACT_ADDRESS"
       continue-on-error: true
 
     - name: Upload deployment artifacts
