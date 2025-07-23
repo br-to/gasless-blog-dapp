@@ -19,7 +19,12 @@
     "frontend:build": "cd frontend && npm run build",
     "frontend:test": "cd frontend && npm run test",
     "typechain": "hardhat compile",
-    "clean": "hardhat clean"
+    "clean": "hardhat clean",
+    "aa:init": "npx tsx scripts/initSmartAccount.ts",
+    "aa:balance": "npx tsx scripts/checkBalance.ts",
+    "aa:send": "npx tsx scripts/sendUserOp.ts",
+    "hardhat:sendUserOp": "npx hardhat sendUserOp --network sepolia",
+    "hardhat:sendUserOp:dryrun": "npx hardhat sendUserOp --network sepolia --dryrun"
   },
   "keywords": [
     "hardhat",
