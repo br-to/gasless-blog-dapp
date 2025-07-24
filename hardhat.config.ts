@@ -7,6 +7,9 @@ import 'hardhat-contract-sizer';
 import 'solidity-coverage';
 import * as dotenv from 'dotenv';
 
+// Hardhatタスクをインポート
+import './tasks/sendUserOp';
+
 dotenv.config();
 
 const config: HardhatUserConfig = {
